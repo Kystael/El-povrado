@@ -15,20 +15,6 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2D Lighting"
+config/name="El Povrado"
 run/main_scene="res://light_shadows.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/size/width=800
-stretch/aspect="keep"
-stretch/mode="2d"
-
-[gdnative]
-
-singletons=[  ]
-
-[rasterizer]
-
-shadow_filter=2
