@@ -245,6 +245,7 @@ anims/motion3 = SubResource( 7 )
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 100.177, 215.697 )
 script = ExtResource( 5 )
+speed = 400
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 8 )
@@ -256,3 +257,9 @@ texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.01
+drag_margin_top = 0.01
+drag_margin_right = 0.01
+drag_margin_bottom = 0.01
