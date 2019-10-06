@@ -4,7 +4,8 @@
 [ext_resource path="res://caster.png" type="Texture" id=2]
 [ext_resource path="res://light.png" type="Texture" id=3]
 [ext_resource path="res://spot.png" type="Texture" id=4]
-[ext_resource path="res://images/potato.png" type="Texture" id=5]
+[ext_resource path="res://Player.gd" type="Script" id=5]
+[ext_resource path="res://godot/potato.png" type="Texture" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -15.913, -15.9738, 15.9079, -16.0785, 15.6986, 15.847, -16.1223, 15.9517 )
@@ -243,6 +244,7 @@ anims/motion3 = SubResource( 7 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 100.177, 215.697 )
+script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 8 )
@@ -250,6 +252,7 @@ shape = SubResource( 8 )
 [node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( 0.902496, 0.902496 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
