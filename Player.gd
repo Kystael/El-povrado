@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export var speed = 100
+var running = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,6 +9,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var run_factor = 1
+	if Input.is_action_pressed("run"):
+		run_factor = 2
+		running = true
+	else:
+		running = false
+
 	var velocity = Vector2()  # The player's movement vector.
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
@@ -22,6 +30,6 @@ func _process(delta):
 		velocity.y -= 1
 		$AnimatedSprite.flip_v = true
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
+		velocity = velocity.normalized() * speed * run_factor
 
 	move_and_slide(velocity)
