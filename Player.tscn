@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://godot/potato.png" type="Texture" id=2]
+[ext_resource path="res://light.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 23.8804
@@ -36,3 +37,9 @@ drag_margin_left = 0.01
 drag_margin_top = 0.01
 drag_margin_right = 0.01
 drag_margin_bottom = 0.01
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+color = Color( 0.345098, 0.929412, 0.109804, 1 )
+energy = 0.8
+shadow_enabled = true
